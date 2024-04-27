@@ -14,7 +14,7 @@ class Director < ApplicationRecord
 
   def filmography
     director_id = self.id
-    matching_movies = Movie.where({ :director_id => director_id }).first
+    matching_movies = Movie.where({ :director_id => director_id })
     return matching_movies
   end
 
